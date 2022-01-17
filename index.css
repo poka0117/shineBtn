@@ -1,0 +1,37 @@
+.btn{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 300px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    background-color: orange;
+    text-align: center;
+    border: solid 2px #333;
+    overflow: hidden;
+}
+.btn::before{
+    content:'';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 40px;
+    left: 0;
+    background-color: white;
+    /* ここから下のコードで動かす */
+    /* animationの名前 */
+    animation-name: shineBtn;
+    /* 一回にかかる時間 */
+    animation-duration: 3s;
+    /* 繰り返しanimationする */
+    animation-iteration-count:infinite;
+}
+@-webkit-keyframes shineBtn {
+    0% { -webkit-transform: scale(0) rotate(10deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(10deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(10deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(10deg); opacity: 0; }
+}
+
